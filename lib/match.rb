@@ -9,10 +9,10 @@ class Match
     @team_y = nil
     @team_x_score = nil
     @team_y_score = nil
-    read_raw_match(raw_match)
+    parse_raw_match(raw_match)
   end
 
-  def read_raw_match(raw_match)
+  def parse_raw_match(raw_match)
     teams_scores = raw_match.split(', ')
     @team_x, @team_x_score = parse_team(teams_scores[0])
     @team_y, @team_y_score = parse_team(teams_scores[1])
